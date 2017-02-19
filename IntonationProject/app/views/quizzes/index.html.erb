@@ -1,0 +1,55 @@
+<div class="ui center aligned one column grid">
+
+<div class="column"
+  <p id="notice"><%= notice %></p>
+</div>
+
+<div class="column">
+  <h1>Listing Quizzes</h1>
+</div>
+
+<div class="column">
+  <table class="ui padded table">
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Height feet</th>
+        <th>Height inches</th>
+        <th>Gender</th>
+        <th>Native mandarin</th>
+        <th>Native english</th>
+        <th>Exp</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @quizzes.each do |quiz| %>
+        <tr>
+          <td><%= quiz.first_name %></td>
+          <td><%= quiz.last_name %></td>
+          <td><%= quiz.age %></td>
+          <td><%= quiz.height_feet %></td>
+          <td><%= quiz.height_inches %></td>
+          <td><%= quiz.gender %></td>
+          <td><%= quiz.native_mandarin %></td>
+          <td><%= quiz.native_english %></td>
+          <td><%= quiz.exp %></td>
+          <td><%= link_to 'Show', quiz, class: "ui blue button" %></td>
+          <td><%= link_to 'Edit', edit_quiz_path(quiz), class: "ui yellow button" %></td>
+          <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui red button" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<br>
+
+<div class="column">
+  <%= link_to 'New Quiz', new_quiz_path, class: 'ui green button' %>
+</div>
+
+</div>

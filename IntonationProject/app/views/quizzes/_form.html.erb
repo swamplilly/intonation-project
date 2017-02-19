@@ -1,0 +1,57 @@
+<%= form_for(@quiz) do |f| %>
+  <% if @quiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:</h2>
+
+      <ul>
+      <% @quiz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="ui centered segment">
+  <div class="ui form">
+    <div class="field">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :age %><br>
+      <%= f.number_field :age %>
+    </div>
+    <div class="field">
+      <%= f.label :height_feet %><br>
+      <%= f.number_field :height_feet %>
+    </div>
+    <div class="field">
+      <%= f.label :height_inches %><br>
+      <%= f.number_field :height_inches %>
+    </div>
+    <div class="field">
+      <%= f.label :gender %><br>
+      <%= f.text_field :gender %>
+    </div>
+    <div class="field">
+      <%= f.label :native_mandarin %><br>
+      <%= f.check_box :native_mandarin %>
+    </div>
+    <div class="field">
+      <%= f.label :native_english %><br>
+      <%= f.check_box :native_english %>
+    </div>
+    <div class="field">
+      <%= f.label :exp %><br>
+      <%= f.text_area :exp %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+</div>
+<% end %>

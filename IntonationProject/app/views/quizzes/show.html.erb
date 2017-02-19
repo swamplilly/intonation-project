@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @quiz.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @quiz.last_name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @quiz.age %>
+</p>
+
+<p>
+  <strong>Height feet:</strong>
+  <%= @quiz.height_feet %>
+</p>
+
+<p>
+  <strong>Height inches:</strong>
+  <%= @quiz.height_inches %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @quiz.gender %>
+</p>
+
+<p>
+  <strong>Native mandarin:</strong>
+  <%= @quiz.native_mandarin %>
+</p>
+
+<p>
+  <strong>Native english:</strong>
+  <%= @quiz.native_english %>
+</p>
+
+<p>
+  <strong>Exp:</strong>
+  <%= @quiz.exp %>
+</p>
+
+<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+<%= link_to 'Back', quizzes_path %>
