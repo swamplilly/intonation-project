@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'recording/index'
+
+  get 'home_page/index'
+
   resources :quizzes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
